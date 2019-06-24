@@ -1,0 +1,103 @@
+
+
+
+.menu {
+  height: 50;
+  width:700;
+
+}
+
+.menu ul {
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+  overflow: hidden;
+   background-color: #333333
+
+}
+.menu li {
+  float: left;
+
+}
+
+.menu a {
+  display: block;
+  color: orange;
+  text-align: center;
+  text-decoration: none;
+  padding: 10;
+  font-size: 20
+}
+
+.conten_wrap {
+  clear: both;
+  height: auto;
+  width: 700;
+  margin:auto;
+}
+
+#left_side{
+  height: auto;
+  width:190;
+  background-image: linear-gradient(to right,#41293e, #2f0743);
+  float:left;
+}
+
+#left_side #intro ul{
+    list-style-type: none;
+    padding: auto;
+    overflow: hidden;
+}
+
+#left_side #intro li{
+  font-size: 20;
+  font-weight: "Comic Sans MS";
+  color:yellow;
+}
+
+
+
+#left_side #skills  ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#left_side #skills  li{
+  padding: 0;
+  margin: 4;
+  font-size: 20;
+  color:#ebbdbc
+}
+
+#left_side p{
+  color: white;
+  font-size: 21;
+  margin: 0;
+}
+
+#content {
+  height:auto;
+  width: 500;
+  background-image: linear-gradient(to right,#bdc3c7, #2c3e50);
+  float:right;
+
+}
+
+#form1 {
+  text-align: center;
+  width: 88%;
+  clear: both;
+}
+
+ #form2{
+font-size: 25;
+border-radius: 3px;
+background-color:#004e92;
+color: white;
+margin-top: 15;
+margin-left: 160;
+width: 100;
+height: 40;
+}

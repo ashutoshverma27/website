@@ -1,0 +1,85 @@
+<head>
+ {%load static%}
+   <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+
+</head>
+
+<div class="conten_wrap">
+
+ <!--menu of site  -->
+  <div class="menu">
+       <ul id="menu_link">
+         <li><a href="#">Home</a></li>
+         <li><a href="#">About</a></li>
+         <li><a href="#">Blog</a></li>
+         <li><a href="#">Copyright</a></li>
+       </ul>
+  </div>
+
+  <div class="gap1" style="height:5;">
+
+  </div>
+
+<!--body of content start here  -->
+  <div class="content_body">
+
+    <!--left side of content body  -->
+    <div id="left_side">
+      <div id="intro">
+
+        <ul >
+          <li>Ashutosh Verma</li>
+          <li>1713310050</li>
+          <li>NIET</li>
+
+        </ul>
+
+      </div>
+      <hr style="border-color:black">
+
+       <div id="skills">
+         <p>Progamming Skills</p>
+         <ul >
+           <li>&rArr;Python</li>
+           <li>&rArr;PHP</li>
+           <li>&rArr;Machine Learning</li>
+           <li>&rArr;Recommendation System</li>
+         </ul>
+
+       </div>
+       <hr style="border-color:black">
+       <div id="skills">
+         <p>Database Knowledge</p>
+         <ul class="skills">
+           <li>&diams;MYSQL</li>
+           <li>&diams;Postgre</li>
+           <li>&diams;Mongo DB</li>
+           <li>&diams;Sqlite</li>
+         </ul>
+       </div>
+    </div>
+
+     <div class="" style="width:10;height:auto;">
+
+     </div>
+    <!--actual content goes here in content body  -->
+    <div id="content">
+      <form class="" action="{%url 'index'%}" method='GET'>
+        <p>Write Your Post Below:</p>
+        <textarea name="post" rows="8" cols="60" placeholder="Write your post here..">
+        </textarea>
+        <br>Fullname: <br>
+        <input id='form1' type="text" name="fullname" ><br>
+        Email:<br>
+        <input id='form1' type="email" name="email" ><br>
+        <input id='form2' type="submit"  value="Post">
+
+      </form>
+      {{post}}
+    </div>
+
+  </div>
+<!--body of content ends here   -->
+
+</div>
