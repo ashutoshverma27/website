@@ -1,0 +1,71 @@
+{%extends 'blueprint.html'%}
+
+{%block content%}
+
+<head>
+  {% load static%}
+
+  <link rel="stylesheet" href="{% static '/css/loggedin.css'%}">
+
+</head>
+
+  <div class="">
+
+    <h1>Welcome {{account.0}}</h1><br>
+    <h4>{{confirm}}</h4>
+
+  </div>
+
+  <div class="my_account">
+    <ul>
+      <li><button onclick="myFunction()" id="hide">My Details</button></li>
+      <div id="hid">
+
+        <table>
+          <tr>
+            <td>Your Name:</td>
+            <td>{{account.0}}</td>
+          </tr>
+
+          <tr>
+            <td>Username:</td>
+            <td>{{account.1}}</td>
+          </tr>
+
+          <tr>
+            <td>Email:</td>
+            <td>{{account.2}}</td>
+          </tr>
+
+          <tr>
+            <td>Password:</td>
+            <td>{{account.3}}</td>
+          </tr>
+
+        </table>
+
+      </div>
+      <li><button type="button" class='dropbtn'><a href="#">Reset Password</a></button></li>
+      <li><button type="button" class='dropbtn'><a href="#">Log Out</a></button></li>
+
+    </ul>
+
+
+
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+<script>
+
+
+  $('#hide').click(function(){
+   $('#hid').toggle();
+});
+</script>
+
+
+
+</div>
+
+
+
+
+{% endblock%}

@@ -77,6 +77,17 @@
   margin: 0;
 }
 
+meter::after {
+ content: attr(data-value);
+ position:relative;
+ left: 1.2em;
+ top: -1em;
+ color: red
+}
+meter::-webkit-meter-optimum-value{
+  background: blue
+}
+
 #content {
   height:auto;
   width: 500;
@@ -100,4 +111,13 @@ margin-top: 15;
 margin-left: 160;
 width: 100;
 height: 40;
+}
+
+
+.login {
+  padding: 100;
+}
+
+#submit_button{
+  padding-left:10;
 }

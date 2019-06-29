@@ -1,0 +1,25 @@
+.my_account ul{
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+  overflow: hidden
+
+}
+
+
+
+.my_account a {
+  color:red;
+  display: inline;
+  text-decoration: none;
+  font-size: 20;
+}
+
+#hid{
+
+  display:none;
+}
+
+#login_Box_Div{
+  display:none;
+}

@@ -1,0 +1,49 @@
+{% extends 'blueprint.html'%}
+    <!--actual content goes here in content body  -->
+    {%block content%}
+    <div id="content">
+       <!--
+            <h1>Sign Up Form</h1>
+            <form class="" action="{%url 'login'%}" method="post">
+
+             {% csrf_token %}
+            <table>
+              <tr>
+                <td>Fullname:</td>
+                <td><input type="text" name="fullname" ></td>
+              </tr>
+
+              <tr>
+                <td>Username:</td>
+                <td>  <input type="" name="username" ></td>
+              </tr>
+
+              <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email"></td>
+              </tr>
+
+              <tr>
+                <td>Password:</td>
+                <td><input type="password" name="password"></td>
+              </tr>
+
+              <tr>
+                <td><input type="submit"  value="Sign Up"></td>
+                <td><a href="{%url 'login'%}">Already Have Account?</a></td>
+              </tr>
+            </table>
+
+            </form>-->
+
+            <form action="{%url 'login'%}" method="post">
+              {% csrf_token %}
+    <label for="fullname">Full name: </label>
+    <input id="fullname" type="text" name="fullname"">
+    <input type="submit" value="Submit">
+</form>
+
+
+    </div>
+
+    {% endblock%}
