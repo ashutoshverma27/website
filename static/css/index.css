@@ -3,7 +3,7 @@
 
 .menu {
   height: 50;
-  width:700;
+  width:100%;
 
 }
 
@@ -31,14 +31,14 @@
 
 .conten_wrap {
   clear: both;
-  height: auto;
-  width: 700;
+  height: 100%;
+  width: 100%;
   margin:auto;
 }
 
 #left_side{
   height: auto;
-  width:190;
+  width:20%;
   background-image: linear-gradient(to right,#41293e, #2f0743);
   float:left;
 }
@@ -90,8 +90,8 @@ meter::-webkit-meter-optimum-value{
 
 #content {
   height:auto;
-  width: 500;
-  background-image: linear-gradient(to right,#bdc3c7, #2c3e50);
+  width: 80%;
+  background-color: #11111;
   float:right;
 
 }
@@ -120,4 +120,16 @@ height: 40;
 
 #submit_button{
   padding-left:10;
+}
+
+.product {
+  width: :25%;
+  height:auto;
+  float: left;
+  display: block;
+  padding-top: 2;
+}
+
+#title {
+  width:100%;
 }

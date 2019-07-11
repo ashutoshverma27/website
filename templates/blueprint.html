@@ -1,98 +1,54 @@
-<head>
- {%load static%}
-   <link rel="stylesheet" href="{% static 'css/index.css' %}">
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+
+		<meta charset="utf-8">
+		<meta name='viewport' content="width=device-width,initial-scale=1">
+
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	</head>
+<body>
+
+   <div class="jumbotron jumbotron-fluid">
+
+        <div class="container-fluid">
+
+          <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+          	<a href="" class="navbar-brand">Shopping Fest</a>
+
+          	<button class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar"><span class="navbar-toggler-icon"></span>
+          	</button>
+
+          	<div class="collapse navbar-collapse" id="collapsibleNavbar">
+          	<ul class="navbar-nav ">
+          		<li class='nav-item'><a href="" class="nav-link">Home</a></li>
+          		<li class='nav-item'><a href="" class="nav-link">About</a></li>
+          		<li class='nav-item'><a href="" class="nav-link">Contact</a></li>
+          	</ul>
+          	<form class="form-inline">
+
+          	  <input type="text" class="form-control mr-sm-2" placeholder="Search">
+          	  <button class="btn btn-success" type='submit'>Search</button>
+          </form>
+          </div>
 
 
-</head>
-
-<div class="conten_wrap">
-
- <!--menu of site  -->
-  <div class="menu">
-       <ul id="menu_link">
-         <li><a href="{% url 'index'%}">Home</a></li>
-         <li><a href="#">About</a></li>
-         <li><a href="{% url 'blog'%}">Blog</a></li>
-         <li><a href="#">Copyright</a></li>
-         <li><a href="{%url 'login'%}">Login</a></li>
-       </ul>
-  </div>
-
-  <div class="gap1" style="height:5;">
-
-  </div>
-
-<!--body of content start here  -->
-  <div class="content_body">
-
-    <!--left side of content body  -->
-    <div id="left_side">
-      <div id="intro">
-
-        <ul >
-          <li>Ashutosh Verma</li>
-          <li>1713310050</li>
-          <li>NIET</li>
-
-        </ul>
-
-      </div>
-      <hr style="border-color:black">
-
-       <div id="skills">
-         <p>Progamming Skills</p>
-         <ul >
-           <li>&rArr;Python</li>
-           <li><meter value=".8" data-value='80%'>80%</meter></li>
-           <li>&rArr;PHP</li>
-           <li><meter value="0.6" data-value='70%'>60%</meter></li>
-           <li>&rArr;Machine Learning</li>
-           <li><meter value="0.2" data-value='20%'>60%</meter></li>
-           <li>&rArr;Recommendation System</li>
-           <li><meter value="0.05" data-value='5%'>60%</meter></li>
-         </ul>
-
-       </div>
-       <hr style="border-color:black">
-       <div id="skills">
-         <p>Database Knowledge</p>
-         <ul class="skills">
-           <li>&diams;MYSQL</li>
-           <li>&diams;Postgre</li>
-           <li>&diams;Mongo DB</li>
-           <li>&diams;Sqlite</li>
-         </ul>
-       </div>
-    </div>
-
-     <div class="" style="width:10;height:auto;">
+          </nav>
+        </div>
 
      </div>
-    <!--actual content goes here in content body  -->
-    <div id="content">
 
-      {%block content%}
-      {%endblock%}
-
-      <!--<div class="">
-        <button type="button" name="button"><a href="{%url 'index1'%}">Index1</a></button>
-      </div>
-
-      <form class="" action="{%url 'blog'%}" method='GET'>
-        <p>Write Your Post Below:</p>
-        <textarea name="post" rows="8" cols="60" placeholder="Write your post here..">
-        </textarea>
-        <br>Fullname: <br>
-        <input id='form1' type="text" name="fullname" ><br>
-        Email:<br>
-        <input id='form1' type="email" name="email" ><br>
-        <input id='form2' type="submit"  value="Post">
-
-      </form>
-      {{post}}-->
-    </div>
-
-  </div>
-<!--body of content ends here   -->
+<div class="container-fluid">
+  {% block content %}
+  {%endblock%}
 
 </div>
+
+
+</body>
+</html>
