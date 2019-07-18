@@ -1,62 +1,45 @@
-{%extends 'blueprint.html'%}
+{%extends 'blueprint.html' %}
 
-{%block content%}
-<!--<div class="">
-  <button type="button" name="button"><a href="{%url 'index1'%}">Index1</a></button>
-</div>
+{% block content%}
 
-<form class="" action="{%url 'blog'%}" method='GET'>
-  <p>Write Your Post Below:</p>
-  <textarea name="post" rows="8" cols="60" placeholder="Write your post here..">
-  </textarea>
-  <br>Fullname: <br>
-  <input id='form1' type="text" name="fullname" ><br>
-  Email:<br>
-  <input id='form1' type="email" name="email" ><br>
-  <input id='form2' type="submit"  value="Post">
+{% if msg %}
+<h2>{{msg}}</h2>
+{% endif%}
 
-</form>-->
-
-
-<div class="row h-100" style="align:left;">
-  <div class="col-4">
-left side content
-  </div>
-</div>
 
 {%for i in listt%}
 <div class="row" style="align:right;">
-  <div class="col-md-2" >
-    <img src="{{i.3}}" width=150 height=250 style="padding:0;margin:0px;">
+  <div class="col-md-3" >
+    <img src="{{i.image}}" width=150 height=250 style="padding:0;margin:0px;">
   </div>
 
-  <div class="col-md-2">
-    <a href="{{i.2}}">{{i.1}}</a>
-    <p>M.R.P: <del>{{i.5}}</del></p>
-    <p>Price: {{i.4}}</p>
-    <p>Saving: {{i.6}}</p>
-    <br>
-    <a href="{{i.0}}" class="btn btn-primary">Buy Now</a>
+  <div class="col-md-3">
+    <a href="{{i.url}}">{{i.title}}</a>
+    <p>{% if i.mrp%}
+    M.R.P: <del>{{i.mrp}}</del><br>
+    {% endif %}
+    Price: {{i.price}}<br>
+    {% if i.saving%}
+    Saving: {{i.saving}}
+    {% endif%}
+    </p>
+    <a href="{{i.url}}" class="btn btn-primary">Buy Now</a><br>
+    <a href="#" class="btn btn-dark mt-2">Add to Cart</a>
+    <!--<div style="position:absolute;top:80%;">Added on:<br>
+      {{i.date}}
+
+    </div>-->
 
   </div>
 
-  <div class="col-md-2" >
-    <img src="{{i.3}}" width=150 height=250 style="padding:0;margin:0px;">
-  </div>
-
-  <div class="col-md-2">
-    <a href="{{i.2}}">{{i.1}}</a>
-    <p>M.R.P: <del>{{i.5}}</del></p>
-    <p>Price: {{i.4}}</p>
-    <p>Saving: {{i.6}}</p>
-    <br>
-    <a href="{{i.0}}" class="btn btn-primary">Buy Now</a>
-
-  </div>
 
 
 </div>
+
 <hr style="border-color:black">
+
+
+
 
 {% endfor %}
 

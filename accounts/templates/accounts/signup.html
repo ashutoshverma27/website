@@ -1,49 +1,39 @@
 {% extends 'blueprint.html'%}
     <!--actual content goes here in content body  -->
     {%block content%}
-    <div id="content">
-       <!--
-            <h1>Sign Up Form</h1>
-            <form class="" action="{%url 'login'%}" method="post">
+<div class="container">
 
-             {% csrf_token %}
-            <table>
-              <tr>
-                <td>Fullname:</td>
-                <td><input type="text" name="fullname" ></td>
-              </tr>
+<div class="row justify-content-center">
+  <div class="col-md-5">
+{% if error %}
 
-              <tr>
-                <td>Username:</td>
-                <td>  <input type="" name="username" ></td>
-              </tr>
+<h2>{{error}}</h2>
 
-              <tr>
-                <td>Email:</td>
-                <td><input type="email" name="email"></td>
-              </tr>
+{% endif %}
 
-              <tr>
-                <td>Password:</td>
-                <td><input type="password" name="password"></td>
-              </tr>
-
-              <tr>
-                <td><input type="submit"  value="Sign Up"></td>
-                <td><a href="{%url 'login'%}">Already Have Account?</a></td>
-              </tr>
-            </table>
-
-            </form>-->
-
-            <form action="{%url 'login'%}" method="post">
-              {% csrf_token %}
-    <label for="fullname">Full name: </label>
-    <input id="fullname" type="text" name="fullname"">
-    <input type="submit" value="Submit">
-</form>
-
-
+  <form action='{% url 'signup' %}' method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <label>Fullname:</label>
+      <input type="text" class="form-control" name='fullname'>
     </div>
+
+    <div class="form-group">
+      <label >Username:</label>
+      <input type="text" class="form-control" name='username'>
+    </div>
+
+    <div class="form-group">
+      <label >Password:</label>
+      <input type="password" class="form-control" name='password'>
+    </div>
+
+    <input type="submit" value="Sign Up" class="btn btn-dark btn-block">
+  </form>
+
+   </div>
+ </div>
+
+</div>
 
     {% endblock%}

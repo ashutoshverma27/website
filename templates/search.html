@@ -1,0 +1,45 @@
+{% extends 'blueprint.html' %}
+
+{% block content%}
+<!--if no products found when user searches-->
+{%if notfound%}
+<h2 >{{notfound}}</h2>
+{% endif %}
+
+{%for i in sortpro%}
+<div class="row" style="align:right;">
+  <div class="col-md-3" >
+    <img src="{{i.image}}" width=150 height=250 style="padding:0;margin:0px;">
+  </div>
+
+  <div class="col-md-3">
+    <a href="{{i.url}}">{{i.title}}</a>
+    <p>{% if i.mrp%}
+    M.R.P: <del>{{i.mrp}}</del><br>
+    {% endif %}
+    Price: {{i.price}}<br>
+    {% if i.saving%}
+    Saving: {{i.saving}}
+    {% endif%}
+    </p>
+    <a href="{{i.url}}" class="btn btn-primary">Buy Now</a>
+    <br>
+    <div style="position:absolute;top:80%;">Added on:<br>
+      {{i.date}}
+
+    </div>
+
+  </div>
+
+
+
+</div>
+
+<hr style="border-color:black">
+
+
+
+
+{% endfor %}
+
+{% endblock %}
