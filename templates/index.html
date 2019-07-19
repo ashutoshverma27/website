@@ -23,8 +23,15 @@
     Saving: {{i.saving}}
     {% endif%}
     </p>
-    <a href="{{i.url}}" class="btn btn-primary">Buy Now</a><br>
-    <a href="#" class="btn btn-dark mt-2">Add to Cart</a>
+    <a href="{{i.url}}" class="btn btn-primary">Buy Now</a>
+    <form class="" action="{% url 'addtocart' %}" method="get">
+      {% csrf_token%}
+      <input type="submit" name="{{i.title}}" value="Add to Cart" class="btn btn-dark mt-2">
+    </form>
+
+    {% if message %}
+    <br>{{message}}
+    {% endif %}
     <!--<div style="position:absolute;top:80%;">Added on:<br>
       {{i.date}}
 

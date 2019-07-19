@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib import auth
 from .models import Account
 from django.utils import timezone
+from posts.models import Product
 def home(request):
     return render(request,'accounts/home.html')
 
@@ -93,3 +94,11 @@ def cart(request):
         return render(request,'accounts/profile/cart.html',{'user':user})
     else:
         return render(request,'accounts/login.html',{'msg':'login to view your cart'})
+def addtocart(request):
+    if request.method=='GET':
+        product_url=request.GET.get('{{i.title}}','')
+        #pro=Product.objects.get(title=product_url)
+        #print(pro)
+        print("lfkjsakljf",product_url)
+        products=Product.objects.all()
+        return render(request,'index.html',{'message':'Added to Cart','listt':products})
